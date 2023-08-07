@@ -11,7 +11,7 @@ if [[ -f "$1" ]]; then
     dirname=$(dirname $1)
     if [[ -d $dirname ]]; then
         cd $dirname
-        echo $no_suffix":" > Makefile
+        echo "make:" > Makefile
         echo -e "\tas -o "$no_suffix".o "$filename >> Makefile
         echo -e "\tld -o $no_suffix "$no_suffix".o" >> Makefile
     fi
